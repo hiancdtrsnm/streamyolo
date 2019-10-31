@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM lapidarioz/docker-python-opencv3-dlib
 
 COPY requirements.txt .
 RUN pip install -r requirements.txt
