@@ -6,6 +6,8 @@
 docker-compose up
 ```
 
-## Sample Image
+## Sample Images
 
-![Ejemplo](img/sample.png)
+![Ejemplo](img/sample1.png)
+![Yolo](img/sample2.png)
+![Face](img/sample3.png)
