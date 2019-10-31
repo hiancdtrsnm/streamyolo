@@ -1,10 +1,11 @@
 version: "3"
 
 services:
-  name:
+  main:
     image: "gia/streamyolo"
     build: .
-    # ports:
-    #   - "OUT:IN"
+    ports:
+      - "8501:8501"
+    command: streamlit run --browser.serverAddress 0.0.0.0 app/moviesdemo.py
     # volumes:
     #   - "OUT:IN"
