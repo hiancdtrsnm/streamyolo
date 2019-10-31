@@ -6,6 +6,6 @@ services:
     build: .
     ports:
       - "8501:8501"
-    command: streamlit run --browser.serverAddress 0.0.0.0 app/moviesdemo.py
+    command: streamlit run --browser.serverAddress 0.0.0.0 moviesdemo.py
     # volumes:
     #   - "OUT:IN"
