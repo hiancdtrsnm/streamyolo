@@ -30,10 +30,13 @@ RUN cd ~ && \
     cd  dlib/ && \
     python3 setup.py install --yes USE_AVX_INSTRUCTIONS
 
+RUN wget https://pjreddie.com/media/files/yolov3.weights /app/yolov3.weights
+RUN wget https://raw.githubusercontent.com/pjreddie/darknet/master/cfg/yolov3.cfg /app/yolov3.cfg
+
 RUN mkdir /app
 COPY requirements.txt /app
 RUN pip install -r /app/requirements.txt
 
-COPY moviesdemo.py /app
+COPY ./app /app
 
 WORKDIR /app
