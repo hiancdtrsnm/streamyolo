@@ -3,7 +3,7 @@ version: "3"
 services:
   name:
     image: "gia/streamyolo"
-    build: ./build
+    build: .
     # ports:
     #   - "OUT:IN"
     # volumes:
