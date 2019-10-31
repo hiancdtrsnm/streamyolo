@@ -8,6 +8,6 @@ docker-compose up
 
 ## Sample Images
 
-![Ejemplo](img/sample1.png)
-![Yolo](img/sample2.png)
-![Face](img/sample3.png)
+![Ejemplo](img/img1.png)
+![Yolo](img/img2.png)
+![Face](img/img3.png)
