@@ -72,6 +72,7 @@ def draw_image_with_boxes(image, boxes, header, description):
     LABEL_COLORS = {
         value: rcolor(value) for value in yolo_clases.values()
     }
+    LABEL_COLORS['facee'] = rcolor('facee')
     image_with_boxes = image.astype(np.float64)
     for _, (xmin, ymin, xmax, ymax, label) in boxes.iterrows():
         image_with_boxes[int(ymin):int(ymax),int(xmin):int(xmax),:] += LABEL_COLORS[label]
@@ -84,7 +85,9 @@ def draw_image_with_boxes(image, boxes, header, description):
     st.image(image_with_boxes.astype(np.uint8), use_column_width=True)
 
 
-
+def detect_faces(image):
+    faces = face_recognition.face_locations(image)
+    return pd.DataFrame({"xmin": face[3], "ymin": face[0], "xmax": face[1], "ymax": face[2], "labels": 'facee'} for face in faces)
 
 path = st.text_input('Path','/home/hian/Videos/vidaocultadelosprogramadors.mpg')
 
@@ -126,3 +129,11 @@ if path:
 
     draw_image_with_boxes(image, boxes, "Real-time Computer Vision",
         "**YOLO v3 Model** (overlap `%3.1f`) (confidence `%3.1f`)" % (overlap_threshold, confidence_threshold))
+
+
+    boxes = detect_faces(image)
+
+    boxes
+
+    draw_image_with_boxes(image, boxes, "Real-time Computer Vision",
+        "Face recognition" )
