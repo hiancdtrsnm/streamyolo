@@ -89,7 +89,7 @@ def detect_faces(image):
     faces = face_recognition.face_locations(image)
     return pd.DataFrame({"xmin": face[3], "ymin": face[0], "xmax": face[1], "ymax": face[2], "labels": 'facee'} for face in faces)
 
-path = st.text_input('Path','/home/hian/Videos/vidaocultadelosprogramadors.mpg')
+path = st.text_input('Path','sample_video/sample.mpg')
 
 yolo_clases
 
