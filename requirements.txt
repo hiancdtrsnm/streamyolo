@@ -26,7 +26,7 @@ MarkupSafe==1.1.1
 more-itertools==7.2.0
 mypy==0.740
 mypy-extensions==0.4.3
-numpy==1.17.3
+numpy==1.22.0
 opencv-python==4.1.1.26
 pandas==0.25.2
 pathtools==0.1.2
